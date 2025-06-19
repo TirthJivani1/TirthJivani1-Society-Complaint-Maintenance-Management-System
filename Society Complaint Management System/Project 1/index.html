@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Society Complaint & Maintenance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Society Complaint & Maintenance System</h1>
+    </header>
+
+    <section class="login-form">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <select id="userRole">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+        <button onclick="login()">Login</button>
+    </section>
+
+    <section id="userPanel" class="hidden">
+        <h2>Submit a Complaint</h2>
+        <input type="text" id="title" placeholder="Enter Complaint Title">
+        <select id="category">
+            <option value="water">Water Issue</option>
+            <option value="electricity">Electricity Issue</option>
+            <option value="maintenance">Maintenance Request</option>
+        </select>
+        <button onclick="submitComplaint()">Submit</button>
+
+        <h3>Complaint Status</h3>
+        <ul id="complaintDisplay"></ul>
+    </section>
+
+    <section id="adminPanel" class="hidden">
+        <h2>Admin Dashboard</h2>
+        <ul id="adminComplaints"></ul>
+        <p>Change status:</p>
+        <select id="statusUpdate">
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Resolved">Resolved</option>
+        </select>
+        <button onclick="updateStatus()">Update Status</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
